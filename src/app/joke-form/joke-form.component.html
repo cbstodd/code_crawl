@@ -1,0 +1,27 @@
+<div class="card">
+    <div class="card-block">
+        <form (keydown.enter)="createJoke(setup.value, punchline.value)">
+            <div class="form-group">
+                <label for="jokeSetup">Joke setup</label>
+                <input type="text"
+                       class="form-control"
+                       id="jokeSetup"
+                       placeholder="Setup"
+                       #setup>
+            </div>
+            <div class="form-group">
+                <label for="jokePunchline">Joke punchline</label>
+                <input type="text"
+                       class="form-control"
+                       id="jokePunchline"
+                       placeholder="Punchline"
+                       #punchline>
+            </div>
+
+            <button type="button"
+                    class="btn btn-primary"
+                    (click)="createJoke(setup.value, punchline.value);">Create
+            </button>
+        </form>
+    </div>
+</div>

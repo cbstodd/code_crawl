@@ -1,0 +1,13 @@
+<div class="card">
+    <div class="card-header">
+        {{ joke.setup }}
+    </div>
+    <div class="card-block">
+        <blockquote class="card-blockquote" [hidden]="joke.hide">
+            <p>{{ joke.punchline }}</p>
+        </blockquote>
+    </div>
+    <button type="button"
+            class="btn btn-primary"
+            (click)="joke.togglePunchline();">View punchline</button>
+</div>
