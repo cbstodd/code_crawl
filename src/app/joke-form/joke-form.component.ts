@@ -14,11 +14,14 @@ export class JokeFormComponent implements OnInit {
      When Emitted, it calls the addJoke function on the form.
      ------------------------------------------------*/
     @Output() jokeCreated = new EventEmitter<Joke>();
+    
 
     // Called when button is clicked
     createJoke(setup:string, punchline:string) {
         this.jokeCreated.emit(new Joke(setup, punchline));
     }
+
+    
 
     constructor() {
     }

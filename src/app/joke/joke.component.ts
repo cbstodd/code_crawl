@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, EventEmitter, Output } from '@angular/core';
 import { Joke } from './joke';
 
 
@@ -10,5 +10,13 @@ import { Joke } from './joke';
 export class JokeComponent {
 
     @Input() joke:Joke;
+    @Output() jokeDeleted = new EventEmitter<Joke>();
+
+    // Called when button is clicked and envokes
+    // emit which calls the delete func.
+    deleteItem(){
+        this.jokeDeleted.emit(this.joke);
+        console.log(`deleteItem was executed`);
+    }
 
 }

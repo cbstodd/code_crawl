@@ -27,7 +27,15 @@ export class JokeListComponent implements OnInit {
     addJoke(joke){
         this.jokes.unshift(joke);
     }
-    
+
+    // Finds joke via index and deletes it.
+    deleteJoke(joke) {
+        let indexToDelete = this.jokes.indexOf(joke);
+        if (indexToDelete !== -1) {
+            this.jokes.splice(indexToDelete,1);
+        }
+    }
+
     ngOnInit() {
     }
 
