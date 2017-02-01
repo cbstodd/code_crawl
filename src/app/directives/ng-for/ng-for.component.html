@@ -1,0 +1,22 @@
+<h2>ngFor</h2>
+<ul>
+    <li *ngFor="let person of people; let i = index;">
+        id: <b>{{ i + 1 }}</b>, Name: {{ person.name }}
+    </li>
+</ul>
+
+<hr>
+
+<h2>ngFor (grouped)</h2>
+<ul>
+    <li *ngFor="let group of peopleByCountry;">
+        Country of origin - <b>{{ group.country }}</b>
+        <ul *ngIf="showPerson;">
+            <li *ngFor="let person of group.people; let i = index;">
+               id: <b>{{ i + 1 }}</b>  Name: <b>{{ person.name }}</b>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<button class="btn btn-warning" (click)="showToggle();">Toggle person</button>

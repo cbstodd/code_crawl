@@ -8,6 +8,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { JokeComponent } from './joke/joke.component';
 import { JokeListComponent } from './joke-list/joke-list.component';
 import { JokeFormComponent } from './joke-form/joke-form.component';
+import { NgForComponent } from './directives/ng-for/ng-for.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { JokeFormComponent } from './joke-form/joke-form.component';
     NavbarComponent,
     JokeComponent,
     JokeListComponent,
-    JokeFormComponent
+    JokeFormComponent,
+    NgForComponent
   ],
   imports: [
     BrowserModule,
