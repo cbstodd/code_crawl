@@ -1,11 +1,9 @@
-<h2>ngFor</h2>
-<ul>
-    <li *ngFor="let person of people; let i = index;">
-        id: <b>{{ i + 1 }}</b>, Name: {{ person.name }}
-    </li>
-</ul>
-
-<hr>
+<button class="btn" (click)="showToggle();"
+        [ngClass]="{'btn-warning':showPerson, 'btn-success':!showPerson}">
+    <!--[class.btn-success]="!showPerson"-->
+    <!--[class.btn-danger]="showPerson"-->
+    Toggle person
+</button>
 
 <h2>ngFor (grouped)</h2>
 <ul>
@@ -13,10 +11,39 @@
         Country of origin - <b>{{ group.country }}</b>
         <ul *ngIf="showPerson;">
             <li *ngFor="let person of group.people; let i = index;">
-               id: <b>{{ i + 1 }}</b>  Name: <b>{{ person.name }}</b>
+                id: <b>{{ i + 1 }}</b> Name: <b>{{ person.name }}</b>
             </li>
         </ul>
     </li>
 </ul>
 
-<button class="btn btn-warning" (click)="showToggle();">Toggle person</button>
+<hr>
+<h2>ngSwitch</h2>
+
+<div *ngFor="let person of people; let i = index;"
+    [ngSwitch]="person.name">
+
+    <ul *ngSwitchCase="'Colin Stodd'">
+        <li *ngIf="showPerson;">
+            <div class="alert alert-danger">
+                id: <b>{{ i + 1 }}</b> Name: <b>{{ person.name }}</b>
+            </div>
+        </li>
+    </ul>
+
+    <ul *ngSwitchCase="'Kevin Stodd'">
+        <li *ngIf="showPerson;">
+            <div class="alert alert-success">
+                id: <b>{{ i + 1 }}</b> Name: <b>{{ person.name }}</b>
+            </div>
+        </li>
+    </ul>
+
+    <ul *ngSwitchDefault>
+        <li *ngIf="showPerson;">
+            <div class="alert alert-info">
+                id: <b>{{ i + 1 }}</b> Name: <b>{{ person.name }}</b>
+            </div>
+        </li>
+    </ul>
+</div>

@@ -41,7 +41,7 @@ export class NgForComponent {
         {
             "name": "Kevin Stodd"
         }
-    ]
+    ];
 
     showPerson:boolean = false;
     showToggle(){
