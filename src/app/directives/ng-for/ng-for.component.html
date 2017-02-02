@@ -1,9 +1,15 @@
+<!--<button class="btn" (click)="showToggle();"-->
+        <!--[ngClass]="{'btn-warning':showPerson, 'btn-success':!showPerson}">-->
+    <!--Toggle person-->
+<!--</button>-->
+
+<!-- * componentName.component.html * -->
 <button class="btn" (click)="showToggle();"
-        [ngClass]="{'btn-warning':showPerson, 'btn-success':!showPerson}">
-    <!--[class.btn-success]="!showPerson"-->
-    <!--[class.btn-danger]="showPerson"-->
-    Toggle person
+        [class.btn-success]="!showPerson"
+        [class.btn-danger]="showPerson">Toggle person
 </button>
+
+
 
 <h2>ngFor (grouped)</h2>
 <ul>

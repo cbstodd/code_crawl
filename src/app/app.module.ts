@@ -9,6 +9,7 @@ import { JokeComponent } from './joke/joke.component';
 import { JokeListComponent } from './joke-list/joke-list.component';
 import { JokeFormComponent } from './joke-form/joke-form.component';
 import { NgForComponent } from './directives/ng-for/ng-for.component';
+import { CardComponent } from './directives/card/card.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { NgForComponent } from './directives/ng-for/ng-for.component';
     JokeComponent,
     JokeListComponent,
     JokeFormComponent,
-    NgForComponent
+    NgForComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,

@@ -43,6 +43,7 @@ export class NgForComponent {
         }
     ];
 
+    // componentName.component.ts
     showPerson:boolean = false;
     showToggle(){
         this.showPerson = !this.showPerson;
