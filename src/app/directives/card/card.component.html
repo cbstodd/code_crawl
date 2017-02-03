@@ -1,52 +1,20 @@
 <div class="row">
-    <div class="col-sm-6" *ngFor="let card of cards;">
-        <div [ngSwitch]="'card.title'">
-            <div *ngSwitchCase="'Colin Stodd'">
-                <img class="card-img-top img-responsive"
-                     src="http://lorempixel.com/450/200/abstract"
-                     *ngIf="showImage;"
-                     alt="{{card.title}}">
-                <div class="card card-outline-warning">
-                    <div class="card-block">
-                        <h3 class="card-title">{{ card.title }}</h3>
-                        <p class="card-text">{{ card.body }}</p>
-                        <a href="#"
-                           (click)="toggleImage()"
-                           class="btn btn-primary">{{ card.date |date:medium }}</a>
-                    </div>
-                </div>
-            </div>
-            <div *ngSwitchCase="'Tommy Bradel'">
-                <img class="card-img-top img-responsive"
-                     src="http://lorempixel.com/450/200/abstract"
-                     *ngIf="showImage;"
-                     alt="{{card.title}}">
-                <div class="card card-outline-success">
-                    <div class="card-block">
-                        <h3 class="card-title">{{ card.title }}</h3>
-                        <p class="card-text">{{ card.body }}</p>
-                        <a href="#"
-                           (click)="toggleImage()"
-                           class="btn btn-primary">{{ card.date |date:medium }}</a>
-                    </div>
-                </div>
-            </div>
-            <div *ngSwitchDefault>
-                <img class="card-img-top img-responsive"
-                     src="http://lorempixel.com/450/200/abstract"
-                     *ngIf="showImage;"
-                     alt="{{card.title}}">
-                <div class="card card-outline-primary">
-                    <div class="card-block">
-                        <h3 class="card-title">{{ card.title }}</h3>
-                        <p class="card-text">{{ card.body }}</p>
-                        <a href="#"
-                           (click)="toggleImage()"
-                           class="btn btn-primary">{{ card.date |date:medium }}</a>
-                    </div>
-                </div>
-            </div>
+    <a href="#"
+       (click)="toggleDate()"
+       class="btn btn-primary">Show/hide date</a>
+</div>
 
+<div class="row">
+    <div class="col-sm-6" *ngFor="let card of cards;">
+        <div class="card" ccCardHover [config]="{querySelector:'p'}">
+            <div class="card-block">
+                <h3 class="card-title">{{ card.title }}</h3>
+                <p class="card-text"
+                   [style.display]="'none'">{{ card.body }}</p>
+                <p *ngIf="showDate;">
+                    <i>{{ card.date | date }}</i>
+                </p>
+            </div>
         </div>
     </div>
 </div>

@@ -2,8 +2,7 @@
     <div class="container">
         <div class="col-sm-3"></div>
         <cc-joke-form class="col-sm-6"
-                      (jokeCreated)="addJoke($event);"
-                      ></cc-joke-form>
+                      (jokeCreated)="addJoke($event);"></cc-joke-form>
 
         <div class="col-sm-3"></div>
     </div>
@@ -15,7 +14,8 @@
             <cc-joke class=""
                      [joke]="joke"
                      *ngFor="let joke of jokes"
-                     (jokeDeleted)="deleteJoke($event);"></cc-joke>
+                     (jokeDeleted)="deleteJoke($event);"
+                     ccCardHover="querySelector"></cc-joke>
         </div>
     </div>
 </div>

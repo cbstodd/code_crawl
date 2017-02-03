@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
     selector: 'cc-card',
@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
     styleUrls: ['./card.component.css']
 })
 export class CardComponent {
+
 
     cards:any[] = [
         {
@@ -22,12 +23,16 @@ export class CardComponent {
             "date": "12-28-1942"
         }
     ];
-    
-    showImage:boolean = true;
-    toggleImage(){
-        console.log(`toggleImage clicked`);
-        this.showImage = !this.showImage;
+
+
+
+    showDate:boolean = false;
+    toggleDate(){
+        console.log(`toggleTitle clicked`);
+        this.showDate = !this.showDate;
     }
+    
+
     
 
 }
