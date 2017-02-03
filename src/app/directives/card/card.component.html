@@ -8,12 +8,13 @@
     <div class="col-sm-6" *ngFor="let card of cards;">
         <div class="card" ccCardHover [config]="{querySelector:'p'}">
             <div class="card-block">
-                <h3 class="card-title">{{ card.title }}</h3>
+                <h3 class="card-title">{{ card.title | uppercase }}</h3>
                 <p class="card-text"
                    [style.display]="'none'">{{ card.body }}</p>
                 <p *ngIf="showDate;">
-                    <i>{{ card.date | date }}</i>
+                    <i>{{ card.date | date:'fullDate' }}</i>
                 </p>
+                <p>{{ card.numbers | percent }}</p>
             </div>
         </div>
     </div>

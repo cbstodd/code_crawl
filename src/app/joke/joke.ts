@@ -9,5 +9,5 @@ export class Joke {
     togglePunchline() {
         this.hide = !this.hide;
     }
-    
+
 }

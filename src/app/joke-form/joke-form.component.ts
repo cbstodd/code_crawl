@@ -13,7 +13,7 @@ export class JokeFormComponent implements OnInit {
      Binds to where form is used. In this case joke-form.
      When Emitted, it calls the addJoke function on the form.
      ------------------------------------------------*/
-    @Output() jokeCreated = new EventEmitter<Joke>();
+    @Output('joke') jokeCreated = new EventEmitter<Joke>();
     
 
     // Called when button is clicked
@@ -21,7 +21,6 @@ export class JokeFormComponent implements OnInit {
         this.jokeCreated.emit(new Joke(setup, punchline));
     }
 
-    
 
     constructor() {
     }

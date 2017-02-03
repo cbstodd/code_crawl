@@ -19,4 +19,7 @@ export class JokeComponent {
         console.log(`deleteItem was executed`);
     }
 
+
+
+
 }

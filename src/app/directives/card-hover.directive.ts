@@ -6,7 +6,7 @@ import { Directive, ElementRef, Renderer, HostListener, HostBinding, Input } fro
 })
 export class CardHoverDirective {
 
-    @Input() config:Object = {
+    @Input() config = {
         querySelector: '.card-text'
     };
 

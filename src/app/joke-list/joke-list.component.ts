@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Joke } from '../joke/joke';
 
 @Component({
@@ -6,7 +6,7 @@ import { Joke } from '../joke/joke';
     templateUrl: './joke-list.component.html',
     styleUrls: ['./joke-list.component.css']
 })
-export class JokeListComponent implements OnInit {
+export class JokeListComponent {
 
     jokes:Joke[];
 
@@ -24,7 +24,7 @@ export class JokeListComponent implements OnInit {
     }
 
     // Called on jokeCreated EventEmitter
-    addJoke(joke){
+    addJoke(joke) {
         this.jokes.unshift(joke);
     }
 
@@ -32,11 +32,8 @@ export class JokeListComponent implements OnInit {
     deleteJoke(joke) {
         let indexToDelete = this.jokes.indexOf(joke);
         if (indexToDelete !== -1) {
-            this.jokes.splice(indexToDelete,1);
+            this.jokes.splice(indexToDelete, 1);
         }
-    }
-
-    ngOnInit() {
     }
 
 }
