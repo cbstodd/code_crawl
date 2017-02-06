@@ -3,13 +3,18 @@
         {{ joke.setup }}
     </div>
     <div class="card-block">
-        <blockquote class="card-blockquote" [hidden]="joke.hide">
-            <p>{{ joke.punchline }}</p>
+        <blockquote class="card-blockquote"
+                    [hidden]="joke.hide">
+            <div class="avatar">
+                <img [src]="joke.imageUrl | defaultImage:'https://www.gorillacircuits.com/wp-content/uploads/2016/01/avatar_placeholder.png'"
+                     class="img-responsive imageUrl" />
+            </div>
+            <p>{{ joke.punchline | badWord:"fuck,Fuck,Shit,shit,Bitch,bitch,Damn,damn" }}</p>
         </blockquote>
     </div>
     <button type="button"
             class="btn btn-warning"
-            (click)="joke.togglePunchline();">View punchline</button>
+            (click)="joke.togglePunchline();">Toggle punchline</button>
     <button type="button"
             class="btn btn-danger"
             (click)="deleteItem();">Delete</button>

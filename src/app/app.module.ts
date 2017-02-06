@@ -11,6 +11,8 @@ import { JokeFormComponent } from './joke-form/joke-form.component';
 import { NgForComponent } from './directives/ng-for/ng-for.component';
 import { CardComponent } from './directives/card/card.component';
 import { CardHoverDirective } from './directives/card-hover.directive';
+import { DefaultImagePipe } from './default-image.pipe';
+import { BadWordPipe } from './bad-word.pipe';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { CardHoverDirective } from './directives/card-hover.directive';
     JokeFormComponent,
     NgForComponent,
     CardComponent,
-    CardHoverDirective
+    CardHoverDirective,
+    DefaultImagePipe,
+    BadWordPipe
   ],
   imports: [
     BrowserModule,
