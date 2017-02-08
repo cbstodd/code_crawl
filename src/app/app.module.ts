@@ -1,8 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { JokeComponent } from './joke/joke.component';
@@ -13,26 +12,30 @@ import { CardComponent } from './directives/card/card.component';
 import { CardHoverDirective } from './directives/card-hover.directive';
 import { DefaultImagePipe } from './default-image.pipe';
 import { BadWordPipe } from './bad-word.pipe';
+import { ModelFormComponent } from './model-form/model-form.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavbarComponent,
-    JokeComponent,
-    JokeListComponent,
-    JokeFormComponent,
-    NgForComponent,
-    CardComponent,
-    CardHoverDirective,
-    DefaultImagePipe,
-    BadWordPipe
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        NavbarComponent,
+        JokeComponent,
+        JokeListComponent,
+        JokeFormComponent,
+        NgForComponent,
+        CardComponent,
+        CardHoverDirective,
+        DefaultImagePipe,
+        BadWordPipe,
+        ModelFormComponent
+    ],
+    imports: [
+        BrowserModule,
+        FormsModule,
+        HttpModule,
+        ReactiveFormsModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
