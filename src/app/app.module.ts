@@ -13,6 +13,7 @@ import { CardHoverDirective } from './directives/card-hover.directive';
 import { DefaultImagePipe } from './default-image.pipe';
 import { BadWordPipe } from './bad-word.pipe';
 import { ModelFormComponent } from './model-form/model-form.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 @NgModule({
     declarations: [
@@ -26,7 +27,8 @@ import { ModelFormComponent } from './model-form/model-form.component';
         CardHoverDirective,
         DefaultImagePipe,
         BadWordPipe,
-        ModelFormComponent
+        ModelFormComponent,
+        ReactiveFormComponent
     ],
     imports: [
         BrowserModule,
