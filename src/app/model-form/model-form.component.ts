@@ -16,6 +16,7 @@ export class ModelFormComponent {
     language:FormControl;
 
     langs:string[] = [
+        "-- N/A --",
         "English",
         "French",
         "German",
@@ -57,6 +58,12 @@ export class ModelFormComponent {
     ngOnInit() {
         this.createFormControls();
         this.createForm();
+    }
+
+    onSubmit(){
+        if (this.signupForm.valid){
+            console.log("Form submitted!", this.signupForm.value);
+        }
     }
 
 
