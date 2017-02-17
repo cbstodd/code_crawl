@@ -15,7 +15,6 @@
                        #imageUrl>
                 <!-- * Error alerts * -->
                 <div class="form-control-feedback" *ngIf="jokeUrl.errors && (jokeUrl.dirty || jokeUrl.touched)">
-                    <p *ngIf="jokeUrl.errors.required">Image Url is required!</p>
                     <p *ngIf="jokeUrl.errors.pattern">Image Url must be valid</p>
                 </div>
             </div>

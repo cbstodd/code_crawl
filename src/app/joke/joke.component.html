@@ -6,14 +6,12 @@
         <blockquote class="card-blockquote"
                     [hidden]="joke.hide">
             <div class="avatar">
-
-                <img [src]="joke.imageUrl" class="img-responsive imageUrl" alt="Image">
                 
                 <!-- * IMAGE PIPE * -->
-                <!--<img [src]="joke.imageUrl | defaultImage:'https://www.gorillacircuits.com/wp-content/uploads/2016/01/avatar_placeholder.png'"-->
-                     <!--class="img-responsive imageUrl" />-->
+                <img [src]="joke.imageUrl | defaultImage:'https://www.gorillacircuits.com/wp-content/uploads/2016/01/avatar_placeholder.png'"
+                     class="img-responsive imageUrl" />
             </div>
-            <!--<p>{{ joke.punchline | badWord:"fuck,Fuck,Shit,shit,Bitch,bitch,Damn,damn" }}</p>-->
+            <p>{{ joke.punchline | badWord:"fuck,Fuck,Shit,shit,Bitch,bitch,Damn,damn" }}</p>
         </blockquote>
     </div>
     <button type="button"

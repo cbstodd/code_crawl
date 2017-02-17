@@ -1,6 +1,6 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
-import { Joke } from '../joke/joke';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Joke } from '../joke';
 
 
 @Component({
@@ -24,7 +24,6 @@ export class JokeFormComponent implements OnInit {
 
     createFormControls() {
         this.jokeUrl      = new FormControl('', [
-            Validators.required,
             Validators.pattern('(http(s?):)|([/|.|\w|\s])*\.(?:jpg|gif|png)')
         ]);
         this.jokeSetup     = new FormControl('', [

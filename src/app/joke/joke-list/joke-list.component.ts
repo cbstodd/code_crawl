@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Joke } from '../joke/joke';
+import { Joke } from '../joke';
 
 @Component({
     selector: 'cc-joke-list',
