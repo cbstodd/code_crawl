@@ -12,8 +12,9 @@ import { CardComponent } from './directives/card/card.component';
 import { CardHoverDirective } from './directives/card-hover.directive';
 import { DefaultImagePipe } from './default-image.pipe';
 import { BadWordPipe } from './bad-word.pipe';
-import { ModelFormComponent } from './model-form/model-form.component';
-import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { ModelFormComponent } from './forms/model-form/model-form.component';
+import { ReactiveFormComponent } from './forms/reactive-form/reactive-form.component';
+import { TemplateFormComponent } from './forms/template-form/template-form.component';
 
 @NgModule({
     declarations: [
@@ -28,7 +29,8 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
         DefaultImagePipe,
         BadWordPipe,
         ModelFormComponent,
-        ReactiveFormComponent
+        ReactiveFormComponent,
+        TemplateFormComponent
     ],
     imports: [
         BrowserModule,

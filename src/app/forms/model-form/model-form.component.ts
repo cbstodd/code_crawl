@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
@@ -6,7 +6,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
     templateUrl: './model-form.component.html',
     styleUrls: ['./model-form.component.css']
 })
-export class ModelFormComponent {
+export class ModelFormComponent implements OnInit {
 
     signupForm:FormGroup;
     firstName:FormControl;
@@ -62,7 +62,8 @@ export class ModelFormComponent {
 
     onSubmit(){
         if (this.signupForm.valid){
-            console.log("Form submitted!", this.signupForm.value);
+            console.log("Model-Form submitted!", this.signupForm.value);
+            this.signupForm.reset();
         }
     }
 

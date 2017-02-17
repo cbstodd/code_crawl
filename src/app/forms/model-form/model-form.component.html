@@ -18,8 +18,8 @@
     </fieldset>
 
     <div class="form-group"
-         [ngClass]="{ 'has-success': email.valid && (email.dirty || email.touched),
-                      'has-danger':email.invalid && (email.dirty || email.touched)}">
+         [ngClass]="{'has-success': email.valid && (email.dirty || email.touched),
+                     'has-danger': email.invalid && (email.dirty || email.touched)}">
         <label>Email</label>
         <input type="email"
                class="form-control"

@@ -17,3 +17,14 @@
     -o-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
 }
+
+.form-control {
+    border-radius: 0;
+}
+
+.well {
+    background-color: #ECEEEF;
+    color: #666;
+    padding: 10px;
+    border: 1px solid #ccc;
+}

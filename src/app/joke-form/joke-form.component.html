@@ -1,34 +1,65 @@
 <div class="card">
     <div class="card-block">
-        <form (keydown.enter)="createJoke(setup.value, punchline.value, imageUrl.value)">
-            <div class="form-group">
-                <label for="imageUrl">Image url</label>
+        <form novalidate
+              [formGroup]="jokeForm"
+              (keydown.enter)="createJoke(setup.value, punchline.value, imageUrl.value)">
+
+            <div class="form-group"
+                 [ngClass]="{'has-success': jokeUrl.valid && (jokeUrl.dirty || jokeUrl.touched),
+                     'has-danger': jokeUrl.invalid && (jokeUrl.dirty || jokeUrl.touched)}">
+                <label>Image url</label>
                 <input type="text"
-                       id="imageUrl"
                        class="form-control"
                        placeholder="Image url"
+                       formControlName="jokeUrl"
                        #imageUrl>
+                <!-- * Error alerts * -->
+                <div class="form-control-feedback" *ngIf="jokeUrl.errors && (jokeUrl.dirty || jokeUrl.touched)">
+                    <p *ngIf="jokeUrl.errors.required">Image Url is required!</p>
+                    <p *ngIf="jokeUrl.errors.pattern">Image Url must be valid</p>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="jokeSetup">Joke setup</label>
+
+            <div class="form-group"
+                 [ngClass]="{'has-success': jokeSetup.valid && (jokeSetup.dirty || jokeSetup.touched),
+                     'has-danger': jokeSetup.invalid && (jokeSetup.dirty || jokeSetup.touched)}">
+                <label>Joke setup</label>
                 <input type="text"
                        class="form-control"
-                       id="jokeSetup"
                        placeholder="Setup"
+                       formControlName="jokeSetup"
                        #setup>
+                <!-- * Error alerts * -->
+                <div class="form-control-feedback" *ngIf="jokeSetup.errors && (jokeSetup.dirty || jokeSetup.touched)">
+                    <p *ngIf="jokeSetup.errors.required">Setup is required!</p>
+                    <p *ngIf="jokeSetup.errors.pattern">URL must be valid</p>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="jokePunchline">Joke punchline</label>
+
+            <div class="form-group"
+                 [ngClass]="{'has-success': jokePunchline.valid && (jokePunchline.dirty || jokePunchline.touched),
+                     'has-danger': jokePunchline.invalid && (jokePunchline.dirty || jokePunchline.touched)}">
+                <label>Joke punchline</label>
                 <input type="text"
                        class="form-control"
-                       id="jokePunchline"
                        placeholder="Punchline"
+                       formControlName="jokePunchline"
                        #punchline>
+                <!-- * Error alerts * -->
+                <div class="form-control-feedback" *ngIf="jokePunchline.errors && (jokePunchline.dirty || jokePunchline.touched)">
+                    <p *ngIf="jokePunchline.errors.required">Punchline is required!</p>
+                    <p *ngIf="jokePunchline.errors.pattern">Email must be valid</p>
+                </div>
             </div>
 
             <button type="button"
                     class="btn btn-primary"
-                    (click)="createJoke(setup.value, punchline.value, imageUrl.value);">Create</button>
+                    (click)="createJoke(setup.value, punchline.value, imageUrl.value);">Create
+            </button>
         </form>
     </div>
+</div>
+
+<div class="well" role="alert">
+    <pre><code>{{ jokeForm.value | json }}</code></pre>
 </div>
