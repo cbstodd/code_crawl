@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-outline-primary" (click)="doGET();">GET</button>
+        <button type="button" class="btn btn-outline-primary" (click)="doPOST();">POST</button>
+        <button type="button" class="btn btn-outline-primary" (click)="doPUT();">PUT </button>
+        <button type="button" class="btn btn-outline-primary" (click)="doDELETE();">DELETE</button>
+    </div>
+</div>
+<br>
+<br>
+<div class="row">
+    <div class="btn-group-vertical" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-outline-secondary" (click)="doGETAsPromise();">As Promise</button>
+        <button type="button" class="btn btn-outline-secondary" (click)="doGETAsPromiseError();">Error as Promise</button>
+        <button type="button" class="btn btn-outline-secondary" (click)="doGETAsObservableError();">Error as Observable</button>
+    </div>
+</div>
+
+<br>
+
+<div class="row">
+    <div class="m-t-1">
+        <button class="btn btn-danger" (click)="doGETWithHeaders();">With Headers</button>
+    </div>
+</div>

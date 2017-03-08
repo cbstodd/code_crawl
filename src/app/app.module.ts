@@ -15,6 +15,7 @@ import { BadWordPipe } from './bad-word.pipe';
 import { ModelFormComponent } from './forms/model-form/model-form.component';
 import { ReactiveFormComponent } from './forms/reactive-form/reactive-form.component';
 import { TemplateFormComponent } from './forms/template-form/template-form.component';
+import { HttpComponent } from './http/http.component';
 
 @NgModule({
     declarations: [
@@ -30,7 +31,8 @@ import { TemplateFormComponent } from './forms/template-form/template-form.compo
         BadWordPipe,
         ModelFormComponent,
         ReactiveFormComponent,
-        TemplateFormComponent
+        TemplateFormComponent,
+        HttpComponent
     ],
     imports: [
         BrowserModule,
